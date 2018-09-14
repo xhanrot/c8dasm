@@ -23,7 +23,6 @@ class DisassemblyWriter:
             dasm_buffer += self.get_label_section(address)
             dasm_buffer += self.get_address_section(address)
             line, address = self.get_inst_section(address)
-            dasm_buffer += line
         
         return dasm_buffer
         
