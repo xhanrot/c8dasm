@@ -4,7 +4,7 @@ A Chip-8 disassembler developed using recursive traversal algorithm.
 c8dasm is yet another Chip-8 disassembler. But this one uses recursive traversal algorithm to generate its output.
 It makes it more accurate than disassemblers using linear sweep algorithm, and allows it to correctly disassemble unaligned jumps.
 
-## Usage:
+## Usage
 
 `./c8dasm.py <path/to/romfile>`
 
