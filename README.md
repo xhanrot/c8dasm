@@ -18,6 +18,10 @@ And then run all tests with the following command:
 
 `py.test`
 
+## References
+
+You can find CHIP-8 specification here : http://devernay.free.fr/hacks/chip8/C8TECH10.HTM
+
 ## Known issues
 
 Opcode `Bxxx` is not handled properly. However, I disassembled a lot of roms, and it seems that this opcode is rarely used.
