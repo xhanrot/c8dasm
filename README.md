@@ -6,7 +6,7 @@ It makes it more accurate than disassemblers using linear sweep algorithm, and a
 
 ## Usage:
 
-./c8dasm.py <path/to/romfile>
+`./c8dasm.py <path/to/romfile>`
 
 ## Installation
 
