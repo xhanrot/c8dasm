@@ -79,6 +79,7 @@ class Disassembler:
                 
             elif opcode == 0xEE:
                 self.add_disassembly(opcode)
+                self.disassembly[self.current_address] = self.opcodes[opcode]
                 self.endblock = True
 
             elif prefix == 0x1000 or prefix == 0x2000:
