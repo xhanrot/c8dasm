@@ -43,7 +43,7 @@ class DisassemblyWriter:
 
     def get_inst_section(self, address):
         line = ""
-        
+
         if address in self.disassembly:
             line = "     {}\n".format(self.disassembly[address])
             address += 2
@@ -52,7 +52,7 @@ class DisassemblyWriter:
             sprite = self.get_sprite_string(data)
             line = "     DB 0x{:02x}    ; {}\n".format(data, sprite[::-1])
             address += 1
-        
+
         return (line, address)
 
     def get_sprite_string(self, data):
@@ -63,8 +63,5 @@ class DisassemblyWriter:
             else:
                 sprite += " "
             data = data >> 1
-        
+
         return sprite
-    
-    def save_disassembly(self, buffer):
-        pass
