@@ -1,20 +1,21 @@
 
 from rom_loader import RomLoader
 
+
 class Disassembler:
 
     START_ADDRESS = 0x200
-    
+
     def __init__(self, rom=None):
         self.romdata = []
         if rom is not None:
             self.romdata = RomLoader.load_rom(rom)
-        
+
         self.labels = []
         self.current_blocks = []
         self.all_blocks = []
         self.disassembly = {}
-        
+
         self.current_address = self.START_ADDRESS
         self.endblock = False
         self.opcodes = {
@@ -79,7 +80,6 @@ class Disassembler:
                 
             elif opcode == 0xEE:
                 self.add_disassembly(opcode)
-                self.disassembly[self.current_address] = self.opcodes[opcode]
                 self.endblock = True
 
             elif prefix == 0x1000 or prefix == 0x2000:
